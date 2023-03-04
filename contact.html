@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fishcreek.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Fish Creek Animal Clinic | Contact</title>
+
+    <script>
+        function validateForm() {
+            if (document.forms[0].myEmail.value == "")
+            {
+                alert("Please enter an e-mail address.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <h1>
+                Fish Creek Animal Hospital
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="askvet.html">Ask the Vet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Contact Fish Creek</h2>
+            <p>Required information is marked with an asterisk (*)</p>
+            <form action="http://webdevbasics.net/scripts/fishcreek.php" method="post" onsubmit="return validateForm();">
+                <label for="myName">Name:</label>
+                <input type="text" name="myName" id="myName">
+                <label for="myEmail">E-mail:</label>
+                <input type="email" name="myEmail" id="myEmail">
+                <label for="myComments">Comments:</label>
+                <textarea name="myComments" id="myComments" cols="20" rows="2"></textarea>
+                <input type="submit" value="Send Now" id="mySubmit">
+            </form> 
+        </main>
+        <footer>
+            Copyright &copy; 2018 Fish Creek Animal Clinic <br>
+            <a href="mailto:example@example.com">Sage Cook</a>
+            <br>
+            <script>
+                var date = document.lastModified;
+                document.write(date);
+            </script>
+        </footer>
+
+    </div>
+</body>
+
+</html>
